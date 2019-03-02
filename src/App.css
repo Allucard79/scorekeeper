@@ -1,0 +1,12 @@
+*{ 
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: #fad390;
+}
+.App {
+  width: 20%;
+}
