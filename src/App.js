@@ -23,13 +23,17 @@ onScoreUpdate = (playerIndex, scoreChange) => {
 }
 
 onPlayerAdd = (playerName) => {
-  const newPlayer = {
-    name: playerName,
-    score: 0,
+  if (!playerName) {
+    alert('Please enter player name')
+  } else {
+    const newPlayer = {
+      name: playerName,
+      score: 0,
+    };
+    this.setState({
+      players: [ ...this.state.players, newPlayer ]
+    })
   }
-  this.setState({
-    players: [...this.state.players, newPlayer]
-  })
 }
 
 onPlayerRemove = (playerIndex) => {
